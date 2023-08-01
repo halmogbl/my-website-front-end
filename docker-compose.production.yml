@@ -1,8 +1,9 @@
 version: '3.3'
 services:
   nextjs:
-    image: my-website-web-prod
+    container_name: my-website-web-prod
     build:
+      context: .
       dockerfile: Dockerfile.production
     ports:
       - '3000:3000'
