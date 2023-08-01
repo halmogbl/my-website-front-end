@@ -1,23 +1,10 @@
 version: '3.3'
 services:
   nextjs:
-    # Name of the container for the Next.js application
-    container_name: my-website-front-end
-    # Build configuration for the Docker image using your Next.js Dockerfile
+    image: my-website-web-prod
     build:
-      context: .
-      dockerfile: Dockerfile
-
-    # Map port 3000 of the container to port 3000 on the host machine
+      dockerfile: Dockerfile.production
     ports:
       - '3000:3000'
-
-    # # Mount the local project directory into the container to enable live development
-    # volumes:
-    #   - .:/app
-    #   # Add an entry in the nextjs container's package.json for the node_modules folder
-    #   - /app/node_modules
-
-    # Optionally, you can set environment variables if needed (e.g., for API endpoints)
     environment:
       - NODE_ENV=production
