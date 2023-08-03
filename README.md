@@ -39,3 +39,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ╰─ docker-compose -f docker-compose.production.yml up --build --force-recreate
 
 ╰─ sudo docker-compose -f docker-compose.production.yml up -d --build --force-recreate
+
+Added Webhook
